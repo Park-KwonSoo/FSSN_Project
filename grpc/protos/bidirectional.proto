@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package bid_service;
+
+service BidirectionalService {
+    rpc RequestApi(Request) returns (Response) {}
+}
+
+message Request {
+    string requestValue = 1;
+    string requestUser = 2;
+}
+
+message Response {
+    int32 rsltCd = 1;
+    string rsltMsg = 2;
+    string rsltValue = 3;
+}
