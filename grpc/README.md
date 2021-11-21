@@ -58,7 +58,13 @@ message Response {
 
 ---
 
-## Server code
+## Server
+
+- Image
+
+![https://user-images.githubusercontent.com/72953899/142759531-a4abfcd2-6209-47f2-bc2d-2c87129446d9.png](https://user-images.githubusercontent.com/72953899/142759531-a4abfcd2-6209-47f2-bc2d-2c87129446d9.png)
+
+- Code
 
 ```jsx
 const PROTO_PATH = './protos/bidirectional.proto';  //proto타입의 경로
@@ -126,6 +132,12 @@ main();
 ```
 
 ### Client
+
+- Image
+
+![https://user-images.githubusercontent.com/72953899/142759515-21ceeefc-6dfd-4c44-9067-2c74dbb5b6c9.png](https://user-images.githubusercontent.com/72953899/142759515-21ceeefc-6dfd-4c44-9067-2c74dbb5b6c9.png)
+
+- Code
 
 ```jsx
 const PROTO_PATH = './protos/bidirectional.proto';  //프로토 파일의 경로를 정의
