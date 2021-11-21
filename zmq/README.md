@@ -1,4 +1,4 @@
-# ZMQ by Node.JS - Bidirection
+# ZMQ by Node.JS - Publish - Subscribe Pattern
 
 ## 이성원 교수님 FSSN - 경희대학교 컴퓨터공학과 박권수
 
