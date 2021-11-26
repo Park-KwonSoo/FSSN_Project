@@ -108,7 +108,7 @@ main();
 
 ```html
 git clone https://github.com/Park-KwonSoo/FSSN_Project.git
-yarn global add @zeromq
+npm install zeromq@6.0.0-beta.6
 cd zmq
 //zmq
 node server
