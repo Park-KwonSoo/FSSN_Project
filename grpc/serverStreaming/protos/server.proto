@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package server_service;
+
+service ServerService {
+    rpc RequestApi(Request) returns (Response) {}
+}
+
+message Request {
+    string message = 1;
+}
+
+message Response {
+    repeated int32 value = 1;
+}
