@@ -10,7 +10,9 @@ const main = async () => {
 
     let randNum = Math.floor(Math.random() * 99 + 1);
     pusher.send(randNum);
-    for await (const [topic, msg] of subscriber) {
+    
+    while(1) {
+        const [topic, msg] = await subscriber.receive();
         console.log("I Received message : ", msg.toString());
         randNum = Math.floor(Math.random() * 99 + 1);
         if (randNum < 50) { 

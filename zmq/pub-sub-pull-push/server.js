@@ -7,7 +7,8 @@ const main = async () => {
     const collector = new zmq.Pull;
     await collector.bind('tcp://*:5558');
 
-    for await (const [msg] of collector) {
+    while(1) {
+        const [msg] = await collector.receive();
         console.log('I : publishing msg : ', msg.toString());
         publisher.send(['zmq3', msg.toString()]);
     }
