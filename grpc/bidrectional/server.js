@@ -22,6 +22,9 @@ const serviceProto = grpc.loadPackageDefinition(packageDefinition).bid_service;
 //call : request가 왔을때 저장되어 있는 값
 //callback : call argument를 통해 받아올 값을 처리하는 콜백 함수 = 이 콜백함수를 통해 client로 response가 전달됨!
 const requestFunc = (call, callback) => {
+
+    console.log('Server processing gRPC bidirectional streaming.');
+
     //callback 인자 : 첫 번쨰 : null, 두 번쨰 : 응답할 값 = Response
     //call은 request를 통해 proto에 정의된 첫 번쨰 message인 Request를 받아올 수 있다.
     callback(null, {
