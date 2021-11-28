@@ -1,7 +1,7 @@
 const zmq = require('zeromq');
 const { Worker } = require('worker_threads');   //thread를 생성하기 위한 node의 모듈
 
-const DIR_NAME = '/Users/parkkwonsoo/Desktop/Project/FSSN_Project/zmq/dealer-router';
+const DIR_NAME = '.';
 const FRONTEND_ADDR = 'tcp://*:5570';
 const BACKEND_ADDR = 'inproc://backend';
 
