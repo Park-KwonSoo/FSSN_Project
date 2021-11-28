@@ -1,7 +1,7 @@
 const zmq = require('zeromq');
 const { Worker } = require('worker_threads');   //thread를 생성하기 위한 node의 모듈
 
-const DIR_NAME = '.';
+const DIR_PATH = '.';
 const FRONTEND_ADDR = 'tcp://*:5570';
 const BACKEND_ADDR = 'inproc://backend';
 
@@ -21,7 +21,7 @@ const ServerTask = async (numberOfWorkers) => {
     //받은 인자만큼 새로운 thread를 생성한다.
     const workers = []
     for (let i = 0; i < numberOfWorkers; i++)
-       workers.push(new Worker(DIR_NAME + '/serverWorker.js'));
+       workers.push(new Worker(DIR_PATH + '/serverWorker.js'));
     
     //프록시를 생성하고, frontend와 backend를 연결한다.
     //두 개의 인자의 위치의 순서는 바뀌어도 상관 없음
